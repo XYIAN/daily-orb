@@ -19,6 +19,8 @@ A mystical, mobile-first web app that delivers daily magical insights, quotes, a
 
 ## Getting Started
 
+### Local Development
+
 ```bash
 npm install
 npm run dev
@@ -26,16 +28,34 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
+### Production Build
+
+```bash
+npm run build
+npm start
+```
+
+## Deployment
+
+### Netlify
+
+1. Connect your repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `.next`
+4. Deploy!
+
+The app includes `netlify.toml` configuration for optimal deployment.
+
 ## Project Structure
 
 ```
 src/
 ├── app/                    # Next.js 15 App Router pages
 │   ├── layout.tsx         # Root layout with PrimeReact provider
-│   ├── page.tsx           # Home page
+│   ├── page.tsx           # Home page with floating orb
 │   ├── globals.css        # Global styles and animations
 │   ├── about/             # About page
-│   ├── archive/           # Archive page
+│   ├── archive/           # Archive page with timeline
 │   └── your-sign/         # Zodiac sign page
 ├── components/            # Reusable UI components
 │   ├── common/            # Shared components (Navbar, SpeedDial)
@@ -71,6 +91,15 @@ src/
 - **useArchive**: Manages archive of past orbs with localStorage
 - **Constants**: Quotes, colors, and zodiac forecasts
 - **Utilities**: Date formatting, storage operations, and helpers
+
+## Key Features
+
+- **Consistent Daily Data**: Same date always produces same results
+- **Zodiac Integration**: Personalized forecasts for each sign
+- **Archive System**: Persistent storage of past orbs
+- **Mobile-First**: Responsive design optimized for all devices
+- **Type Safety**: Full TypeScript coverage
+- **Error Handling**: Robust localStorage operations
 
 ## License
 
