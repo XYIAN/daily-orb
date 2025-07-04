@@ -41,9 +41,19 @@ src/
 │   ├── common/            # Shared components (Navbar, SpeedDial)
 │   ├── features/          # Feature-specific components
 │   └── index.ts           # Clean exports for @/components imports
-├── lib/                   # Utility libraries
-│   └── providers/         # PrimeReact providers and theme setup
-└── hooks/                 # Custom hooks and data logic (coming soon)
+├── providers/             # PrimeReact providers and theme setup
+├── constants/             # Application constants
+│   ├── quotes.ts          # Daily mystical quotes
+│   ├── colors.ts          # Lucky colors
+│   └── zodiac.ts          # Zodiac signs and forecasts
+├── hooks/                 # Custom hooks and business logic
+│   ├── useDailyOrb.ts     # Daily orb data generation
+│   └── useArchive.ts      # Archive management
+├── types/                 # TypeScript type definitions
+│   └── index.ts           # All application types
+└── utils/                 # Utility functions
+    ├── date.ts            # Date formatting and utilities
+    └── storage.ts         # localStorage operations
 ```
 
 ## Component Architecture
@@ -54,6 +64,13 @@ src/
 - **DailyOrbDialog**: Modal dialog for orb revelations
 - **ArchiveTimeline**: Timeline view of past orbs
 - **Navbar/SpeedDial**: Navigation components
+
+## Business Logic
+
+- **useDailyOrb**: Generates consistent daily data based on date
+- **useArchive**: Manages archive of past orbs with localStorage
+- **Constants**: Quotes, colors, and zodiac forecasts
+- **Utilities**: Date formatting, storage operations, and helpers
 
 ## License
 
